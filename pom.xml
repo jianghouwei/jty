@@ -17,6 +17,7 @@
 		<quartz.version>2.2.1</quartz.version>
 		<jackson.version>2.4.4</jackson.version>
 		<slf4j.version>1.7.10</slf4j.version>
+		<log4j.version>1.2.17</log4j.version>
 		<logback.version>1.1.2</logback.version>
 		<commons-lang3.version>3.1</commons-lang3.version>
 		<guava.version>18.0</guava.version>
@@ -32,7 +33,7 @@
 
 		<!-- other -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>1.7</jdk.version>
 	</properties>
 
 	<!-- 设定仓库 -->
@@ -249,6 +250,11 @@
 			<scope>runtime</scope>
 		</dependency>
 		<!-- 代码直接调用log4j会被桥接到slf4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
